@@ -1,6 +1,7 @@
 package com.testingacademy.testNGExamples;
 
 import org.junit.Test;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public class APITesting012_TestNG {
@@ -12,10 +13,11 @@ public class APITesting012_TestNG {
 public void getBookingID(){
     System.out.println("2");
 }
-@Test
+@AfterTest
 public void test_PUT(){
         //token and BookingID
     System.out.println("3");
+    System.out.println("Close");
 
 }
 }
