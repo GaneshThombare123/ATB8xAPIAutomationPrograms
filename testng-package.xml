@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/DELL/IdeaProjects/ATB8xAPIAutomationPrograms">
+<packages>
+    <parameter name=" browser" value="value"></parameter>
+    <groups>
+        <run>
+            <include name="reg"></include>
+            <include name="qa"></include>
+        </run>
+    </groups>
+        <package name = "com.testingacademy.testNGExamples"/>
+        </packages>
+    </test>
+</suite>

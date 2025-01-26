@@ -6,6 +6,7 @@ import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Test;
+import static org.assertj.core.api.Assertions.*;
 
 public class APITesting011_IntegrationTestCase {
 
@@ -41,8 +42,12 @@ public class APITesting011_IntegrationTestCase {
 
              token = response.jsonPath().getString("token");
              System.out.println(token);
-             return token;
 
+             // AssertJ
+
+             assertThat(token).isNotEmpty().isNotNull().isAlphanumeric().isNotBlank();
+
+             return token;
     }
        public String getBookingId(){
 String payload_POST = "{\n"+
@@ -71,6 +76,10 @@ String payload_POST = "{\n"+
 
            bookingId = response.jsonPath().getString("bookingid");
            System.out.println(bookingId);
+
+           assertThat(bookingId).isNotNull().isNotBlank().isNotEmpty();
+
+
            return bookingId;
        }
      @Test
