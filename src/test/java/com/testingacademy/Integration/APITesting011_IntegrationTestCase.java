@@ -77,9 +77,7 @@ String payload_POST = "{\n"+
            bookingId = response.jsonPath().getString("bookingid");
            System.out.println(bookingId);
 
-           assertThat(bookingId).isNotNull().isNotBlank().isNotEmpty();
-
-
+           assertThat(bookingId).isNotNull().isNotBlank().isNotEmpty().isNotNull();
            return bookingId;
        }
      @Test
